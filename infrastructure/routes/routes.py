@@ -7,8 +7,8 @@ from domain.models import Order, OrderProduct
 from infrastructure.repositories.sql_orders_repositories import SQLOrdersRepository
 
 # Crear Blueprints para las rutas de la API relacionadas con órdenes y productos de órdenes
-orders_bp = Blueprint('ordenes', __name__)
-order_products_bp = Blueprint('ordenes_productos', __name__)
+orders_bp = Blueprint('orders', __name__)
+order_products_bp = Blueprint('products_orders', __name__)
 
 # Crear una instancia de DatabaseConnection para la conexión a la base de datos
 db_connection = DatabaseConnection(
