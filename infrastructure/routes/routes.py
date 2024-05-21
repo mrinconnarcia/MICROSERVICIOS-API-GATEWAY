@@ -26,7 +26,7 @@ def create_order():
     data = request.json
     order = Order(data['id'], data['total'], data['date'], data['status'])
     created_order = orders_repository.create_order(order)
-    return jsonify(created_order._dict_)
+    return jsonify(created_order.__dict__)
 
 
 @orders_bp.route('/getById/<int:order_id>', methods=['GET'])
